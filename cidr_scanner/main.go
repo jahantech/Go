@@ -10,12 +10,6 @@ import (
 
 const CIDR_RANGE string = "192.168.0"
 
-
-struct Hosts{
-	IpAddress string,
-	Status string,
-	OpenPorts []string
-}
 func main() {
 
 	var wg sync.WaitGroup
