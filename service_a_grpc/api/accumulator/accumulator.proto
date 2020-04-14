@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = ".;accumulator";
+
+message AccumulatorRequest {
+    int32 number = 1;
+}
+
+message AccumulatorResponse {
+    int32 number = 1;
+}
+
+service Accumulator{
+    rpc Accumulate(AccumulatorRequest) returns (AccumulatorResponse) {}
+}
