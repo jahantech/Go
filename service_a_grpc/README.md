@@ -16,3 +16,8 @@ https://github.com/google/protobuf/releases
 ## Use protoc compiler to generate code files from proto file
 ```cd api/ && protoc -I accumulator  accumulator/accumulator.proto --go_out=plugins=grpc:accumulator```
 
+## Server
+```go run cmd/service_a_grpc/server.go```
+
+## Client
+```go run cmd/client_a_grpc/client.go```
