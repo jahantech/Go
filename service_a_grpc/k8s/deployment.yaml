@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: service-a-grpc
+spec:
+  selector:
+    matchLabels:
+      app: service-a-grpc
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: service-a-grpc
+    spec:
+      containers:
+      - image: service-a-grpc:1.0
+        name: service-a-grpc
+        ports:
+        - containerPort: 50051
+          name: service-a-grpc

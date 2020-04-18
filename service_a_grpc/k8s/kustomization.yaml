@@ -1,0 +1,11 @@
+namespace: default
+commonLabels:
+  app: service-a-grpc
+resources:
+- deployment.yaml
+- service.yaml
+
+configMapGenerator:
+- name: dependencies
+  literals:    
+  - CODE_SVC=service-b-rest
