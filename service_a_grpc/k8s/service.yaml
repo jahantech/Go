@@ -4,3 +4,9 @@ metadata:
   name: service-a-grpc
 spec:
   type: NodePort
+  ports:
+  - port: 50051
+    nodePort: 32051
+    protocol: TCP
+  selector:
+    app: service-a-grpc
