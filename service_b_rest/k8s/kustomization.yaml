@@ -1,0 +1,9 @@
+namespace: default
+resources:
+- deployment.yaml
+- service.yaml
+
+configMapGenerator:
+- name: dependencies
+  literals:    
+  - MAX_DELAY=5

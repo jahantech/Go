@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2 
+kind: Deployment
+metadata:
+  name: service-b-rest
+spec:
+  selector:
+    matchLabels:
+      app: service-b-rest
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: service-b-rest
+    spec:
+      containers:
+      - image: service-b-rest:1.0
+        name: service-b-rest
+        ports:
+        - containerPort: 8080
+          name: service-b-rest

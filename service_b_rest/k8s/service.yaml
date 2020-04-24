@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-b-rest
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 32080
+    protocol: TCP
+  selector:
+    app: service-a-grpc
